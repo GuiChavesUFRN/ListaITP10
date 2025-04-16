@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int N, j;
+    j = 0;
+    cin >> N;
+
+    for (int k = 1; k <= N; k++) {
+        j = 0;
+        for (int i = 1; i <= k/2; i++) {
+            if (k % i == 0) {
+                j = j + i;
+            }
+        }
+        if (j == k) {
+            cout << k << endl;
+        }
+    }
+}
