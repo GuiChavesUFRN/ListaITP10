@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int T, h = 1;
+    cin >> T;
+    bool Tri = false;
+
+    while (h <= cbrt(T)) {
+        if (h * (h + 1) * (h + 2) == T) {
+            cout << T << " é triangular!\n";
+            Tri = true;
+            break;
+        }
+        else {
+            h++;
+        }
+    }
+    if (not Tri) {
+        cout << T << " não é triangular.";
+    }
+}
